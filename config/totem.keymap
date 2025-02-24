@@ -47,7 +47,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        prev_tab {
+            bindings = <&kp LS(LC(TAB))>;
+            key-positions = <24 23>;
+        };
+
+        next_tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <24 25>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
