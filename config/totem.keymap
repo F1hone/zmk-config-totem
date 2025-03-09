@@ -62,6 +62,16 @@
             bindings = <&kp LC(TAB)>;
             key-positions = <24 25>;
         };
+
+        homerow_click {
+            bindings = <&kp LS(LG(SPACE))>;
+            key-positions = <12 13>;
+        };
+
+        homerow_scroll {
+            bindings = <&kp LS(LG(J))>;
+            key-positions = <13 11>;
+        };
     };
 
     keymap {
