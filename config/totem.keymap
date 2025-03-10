@@ -21,15 +21,15 @@
 #define Gameplus    5
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <150>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <240>;
 };
 
 &lt {
     tapping-term-ms = <240>;
-    flavor = "balanced";
+    flavor = "hold-preferred";
     quick-tap-ms = <150>;
 };
 
