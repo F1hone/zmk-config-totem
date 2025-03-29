@@ -23,7 +23,7 @@
 &mt {
     quick-tap-ms = <150>;
     global-quick-tap;
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <240>;
 };
 
@@ -41,7 +41,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 
@@ -121,9 +121,9 @@
         Sym {
             display-name = "Sym";
             bindings = <
-           &trans           &kp UNDER    &kp PLUS  &trans      &trans         &trans     &trans         &trans        &trans                 &trans
-           &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS   &trans
-&kp TILDE  &trans           &trans       &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &kp PIPE      &kp RIGHT_PARENTHESIS  &trans  &kp HOME
+           &trans           &kp UNDER    &kp PLUS  &trans      &trans         &trans     &trans         &kp LEFT_BRACE  &kp RIGHT_BRACE        &trans
+           &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK    &kp LEFT_PARENTHESIS   &trans
+&kp TILDE  &trans           &trans       &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &kp PIPE        &kp RIGHT_PARENTHESIS  &trans  &kp HOME
                                          &trans    &mo 3       &trans         &trans     &trans         &trans
             >;
         };
