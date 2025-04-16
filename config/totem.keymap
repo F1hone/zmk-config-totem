@@ -82,6 +82,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        layer_tap_bspc_del: layer_tap_bspc_del {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_BSPC_DEL";
+            bindings = <&mo>, <&bkspc_del>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -119,10 +128,10 @@
         Base {
             display-name = "Base";
             bindings = <
-                         &kp Q        &kp W        &kp E                    &kp R          &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
-                         &hml LGUI A  &hml LALT S  &hml LCTRL D             &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMICOLON
-&mt LEFT_CONTROL ESCAPE  &kp Z        &kp X        &kp C                    &kp V          &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH            &kp APOSTROPHE
-                                                   &hml LEFT_COMMAND SPACE  &lt 1 TAB      &kp ENTER    &kp SPACE  &lt 2 BSPC    &smart_shift
+                         &kp Q        &kp W        &kp E                    &kp R          &kp T        &kp Y      &kp U                    &kp I         &kp O        &kp P
+                         &hml LGUI A  &hml LALT S  &hml LCTRL D             &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J             &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMICOLON
+&mt LEFT_CONTROL ESCAPE  &kp Z        &kp X        &kp C                    &kp V          &kp B        &kp N      &kp M                    &kp COMMA     &kp DOT      &kp SLASH            &kp APOSTROPHE
+                                                   &hml LEFT_COMMAND SPACE  &lt 1 TAB      &kp ENTER    &kp SPACE  &layer_tap_bspc_del 2 0  &smart_shift
             >;
         };
 
