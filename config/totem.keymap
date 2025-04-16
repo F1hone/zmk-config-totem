@@ -64,6 +64,24 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
         };
+
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_SHIFT";
+            bindings = <&sk RIGHT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        bkspc_del: bkspc_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKSPC_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -101,10 +119,10 @@
         Base {
             display-name = "Base";
             bindings = <
-                         &kp Q        &kp W        &kp E                    &kp R          &kp T        &kp Y      &kp U         &kp I                   &kp O        &kp P
-                         &hml LGUI A  &hml LALT S  &hml LCTRL D             &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K            &hmr RALT L  &hmr RGUI SEMICOLON
-&mt LEFT_CONTROL ESCAPE  &kp Z        &kp X        &kp C                    &kp V          &kp B        &kp N      &kp M         &kp COMMA               &kp DOT      &kp SLASH            &kp APOSTROPHE
-                                                   &hml LEFT_COMMAND SPACE  &lt 1 TAB      &kp ENTER    &kp SPACE  &lt 2 BSPC    &mt RIGHT_SHIFT DELETE
+                         &kp Q        &kp W        &kp E                    &kp R          &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
+                         &hml LGUI A  &hml LALT S  &hml LCTRL D             &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMICOLON
+&mt LEFT_CONTROL ESCAPE  &kp Z        &kp X        &kp C                    &kp V          &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp SLASH            &kp APOSTROPHE
+                                                   &hml LEFT_COMMAND SPACE  &lt 1 TAB      &kp ENTER    &kp SPACE  &lt 2 BSPC    &smart_shift
             >;
         };
 
