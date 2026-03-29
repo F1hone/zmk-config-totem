@@ -14,7 +14,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define Base        0
-#define Nav         1
+#define Chk         1
 #define Sym         2
 #define Fun         3
 #define Game        4
@@ -135,7 +135,7 @@
             >;
         };
 
-        Nav {
+        Chk {
             display-name = "Chk";
             bindings = <
            &trans        &kp MINUS     &kp EQUAL     &trans        &trans      &kp LC(LS(TAB))  &kp LC(TAB)    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UP_ARROW
