@@ -1,25 +1,25 @@
-# on: [push, pull_request, workflow_dispatch]
-
-# jobs:
-#   build:
-#     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
-    inputs:
-      clean_cache:
-        description: '是否清理编译缓存 (Clean Build)'
-        required: false
-        type: boolean
-        default: false
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      # 将手动选择的开关传递给官方构建脚本
-      install_dependencies: ${{ github.event.inputs.clean_cache == 'true' }}
+
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+#   workflow_dispatch:
+#     inputs:
+#       clean_cache:
+#         description: '是否清理编译缓存 (Clean Build)'
+#         required: false
+#         type: boolean
+#         default: false
+
+# jobs:
+#   build:
+#     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+#     with:
+#       # 将手动选择的开关传递给官方构建脚本
+#       install_dependencies: ${{ github.event.inputs.clean_cache == 'true' }}
